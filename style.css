@@ -1,18 +1,20 @@
 * {
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    text-decoration: none;
     box-sizing: border-box;
 }
 body {
-    background: linear-gradient(45deg, rgb(255, 73, 73), rgb(255, 65, 198));
     min-height: 100vh;
+    min-width: 240px;
+    background: linear-gradient(45deg, rgb(255, 70, 70), rgb(211, 37, 255));
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 ul.container {
     position: relative;
-    list-style-type: none;
     width: 200px;
     height: 200px;
     display: flex;
@@ -27,18 +29,19 @@ ul.container.active li {
 }
 ul.container .activeMe {
     position: absolute;
+    background-color: rgb(210, 30, 195);
     width: 60px;
     height: 60px;
-    background-color: rgba(255, 255, 255);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2.8em;
     z-index: 99;
+    box-shadow: 0 3px 4px black;
+    color: #fff;
     cursor: pointer;
     transition: 1.8s;
-    box-shadow: 0 3px 4px black;
 }
 ul.container li {
     position: absolute;
@@ -49,19 +52,18 @@ ul.container li {
     transform: rotate(0deg) translateX(80px);
 }
 ul.container li a {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(124, 26, 116);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
     border-radius: 50%;
-    background-color: #fff;
-    transform: rotate(calc(360deg / -8 * var(--i)));
-    box-shadow: 0 0 5px black;
+    color: #fff;
+    font-size: 1.5em;
     --ionicon-stroke-width: 50px;
-    font-size: 1.3em;
-    color: black;
+    transition: .3s;
 }
 ul.container li a:hover {
-    color: red;
+    color: rgb(228, 55, 213);
 }
