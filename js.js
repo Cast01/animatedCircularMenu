@@ -1,7 +1,6 @@
-let activeMe = document.querySelector('.activeMe');
+let clickMe = document.querySelector('.clickMe');
 let container = document.querySelector('.container');
 
-activeMe.onclick = function() {
+clickMe.onclick = function() {
   container.classList.toggle('active');
-  console.log('asdasdas')
 }
